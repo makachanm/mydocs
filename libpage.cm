@@ -1,10 +1,4 @@
 @define(addbr input add(input `<br>`))
-
-@define(adda_atext atext add(atext `</a>`))
-@define(adda_alink alink add(`<a href="` alink))
-@define(adda_aclose alink add(adda_alink(alink) `">`))
-@define(a alink atext add(adda_aclose(alink) adda_atext(atext)))
-
 <!DOCTYPE html>
     <head>
         <meta charset="utf-8" />
