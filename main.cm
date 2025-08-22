@@ -1,0 +1,20 @@
+@define(doctitle `maka`)
+
+@define(myname `maka - Hyeonseong Yang`)
+
+@define(edutitle input add(input `Educations`))
+@define(edu1 input add(input `2024~20?? - Computer Science (in Jeonbuk National University)`))
+
+@define(projectitle input add(input `Projects`))
+@define(p1 input add(input `termfedi - Terminal Fediverse Client`))
+@define(p2 input add(input `cutter - Scheme/M4 inspired macro language`))
+@define(p3 input add(input `questionbasket - self-host anonymous question service`))
+
+@define(linktitle input add(input `Links`))
+@define(l1 input add(input `<a href="https://github.com/makachanm/">Github</a>`))
+
+
+@define(doccontent chain(myname() addbr addbr edutitle addbr edu1 addbr addbr projectitle addbr p1 addbr p2 addbr p3 addbr addbr linktitle addbr l1))
+
+@include(`libpage.cm`)
+
