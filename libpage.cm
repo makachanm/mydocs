@@ -1,4 +1,5 @@
 @define(addbr input add(input `<br>`))
+@define(addlink input link text add(input add(`<a href="` add(link add(`">` add(text `</a>`))))))
 <!DOCTYPE html>
     <head>
         <meta charset="utf-8" />
