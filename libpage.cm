@@ -1,5 +1,10 @@
 @define(addbr input add(input `<br>`))
 @define(addlink input link text add(input add(`<a href="` add(link add(`">` add(text `</a>`))))))
+@define(addimg input src alt add(input add(`<img class="content-image" src="` add(src add(`" alt="` add(alt `">`))))))
+@define(addcode input codes add(input add(`<pre><code class="code">` add(codes `</code></pre>`))))
+@define(addul_h input add(input `<ul>`))
+@define(addul_t input add(input `</ul>`))
+@define(addul_item input text add(input add(`<li>` add(text `</li>`))))
 <!DOCTYPE html>
     <head>
         <meta charset="utf-8" />

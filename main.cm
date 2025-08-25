@@ -1,12 +1,14 @@
 @define(doctitle `maka`)
 
-@define(myname `maka - Hyeonseong Yang`)
+@define(myname addcode(` ` `maka - Hyeonseong Yang
+amature programmer in south korea
+interested in PL/Compiler `))
 
 @define(edutitle input add(input `Educations`))
-@define(edu1 input add(input `2024~20?? - Computer Science (in Jeonbuk National University)`))
+@define(edu1 input add(input `2024~20?? - Computer Science (in Jeonbuk National University - ungraduated)`))
 
 @define(projectitle input add(input `Projects`))
-@define(p1 input add(input `termfedi - Terminal Fediverse Client`))
+@define(p1 input add(input `termfedi - terminal based fediverse client`))
 @define(p1link input addlink(input `https://github.com/makachanm/termfedi` ` (link)`))
 @define(p2 input add(input `cutter - Scheme/M4 inspired macro language`))
 @define(p2link input addlink(input `https://github.com/makachanm/cutter` ` (link)`))
@@ -18,17 +20,16 @@
 @define(l2 input addlink(input `https://github.com/maka8x1/` `Github (Works)`))
 
 @define(doccontent chain(
-myname() 
-addbr addbr 
-edutitle addbr 
-edu1 addbr addbr 
-projectitle addbr 
+myname() addbr 
+edutitle addbr addul_h
+edu1 addbr addbr addul_t
+projectitle addbr addul_h 
 p1 p1link addbr 
 p2 p2link addbr 
-p3 p3link addbr addbr 
-linktitle addbr 
+p3 p3link addbr addbr addul_t
+linktitle addbr addul_h
 l1 addbr 
-l2 addbr ))
+l2 addbr addul_t ))
 
 @include(`libpage.cm`)
 
