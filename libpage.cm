@@ -5,6 +5,7 @@
 @define(addul_h input add(input `<ul>`))
 @define(addul_t input add(input `</ul>`))
 @define(addul_item input text add(input add(`<li>` add(text `</li>`))))
+@define(addmastodon input add(input `<a rel="me" href="https://qdon.space/@makanomoyaki">Mastodon</a>`))
 <!DOCTYPE html>
     <head>
         <meta charset="utf-8" />

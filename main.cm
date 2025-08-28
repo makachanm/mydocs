@@ -29,7 +29,8 @@ p2 p2link addbr
 p3 p3link addbr addbr addul_t
 linktitle addbr addul_h
 l1 addbr 
-l2 addbr addul_t ))
+l2 addbr 
+addmastodon addbr addul_t ))
 
 @include(`libpage.cm`)
 
