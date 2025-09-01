@@ -1,8 +1,7 @@
 @define(doctitle `maka`)
 
 @define(myname addcode(` ` `maka - Hyeonseong Yang
-amature programmer in south korea
-interested in PL/Compiler `))
+amature programmer in south korea`))
 
 @define(edutitle input add(input `Educations`))
 @define(edu1 input add(input `2024~20?? - Computer Science (in Jeonbuk National University - ungraduated)`))
