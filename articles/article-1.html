@@ -1,0 +1,61 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>재귀함수의 시간복잡도 판별</title>
+        <link href="../style.css" rel="stylesheet"/>    
+    </head>
+    <body>
+        <div class="post-info">
+            <h1 class="post-title">재귀함수의 시간복잡도 판별</h1>
+        </div>
+        <div class="post-section">
+            <p>본 문서는 필자가 전공 수업을 수강하며 배운 내용들에 대하여 간략하게 정리하기 위해 작성하는 문서이다.
+본 문서에서는 엄밀한 정의를 포함하지 않고, 오직 이해를 위해 편리한 방법으로 내용을 전개할 것이다.<br><br>
+재귀함수는 일반적으로 표현되는 함수와는 달리, 자신을 호출한다는 특성 탓에 반복/분기로 이루어진 기존의 로직과는 달리 해당 함수의
+복잡도를 판별하기 어렵다는 것이 특징이다. 재귀함수는 같은 형태를 유지하는데, 여기서 재귀함수가 패턴을 가진다는 사실을 알 수 있다.
+이 점은 재귀함수의 패턴을 수학적인 방법을 통해 표현할 수 있음을 뜻하고, 이 수학적인 표현을 O-notation을 통해 표현할 수 있는 방법이 생긴다.
+<br><br>
+해당 표현법은 수열과 집합에서 해당 수열 또는 집합의 원소의 규칙성을 최초의 원소에 대하여 변화를 나타낼 수 있는 하나의 식인 점화식의 형태를 빌려
+알고리즘 또한 "알고리즘의 점화식"을 통하여 표현할 수 있다는 점을 알 수 있다. 시간복잡도를 알아내기 위해 우리는 수행에 대한 단순한 함수 T(n)를 가정해 볼 것이다.<br><br>T(n)에 대해, 우리는 이것이 "재귀함수에서 재귀되는 함수"로 가정할 것이다. 고로, 이것이 바로 시간복잡도 분석에서 "처리"로 여겨지는 
+부분이 될 것이다. 우리는 가장 단순한 병합 정렬 알고리즘에 대해서 이를 다뤄볼 것이다.
+<br><br><pre><code class="code">mergeSort(a[], start, end)
+    if start < end
+        mid = (start + end) / 2
+        mergeSort(a[], start, mid)
+        mergeSort(a[], mid + 1, end)
+        merge(a[], start, mid, end)
+</code></pre><br>해당 의사코드를 T(n)에 대한 식으로 바꾸어 보자.<br><br><pre><code class="code">T(n) = 2T(n/2) + n</code></pre><br>merge()에 대해서 처리하는 부분은 재귀하지 않으므로, n을 통하여 표현해야 한다. 
+이 부분은 충분히 무시되거나 또는 특정한 방법으로써 취급될 수 있다. 이는 알고리즘의 전체적 맥락에 따라 적절히 고려되어야 한다.
+이제 점화식을 구하였으므로, 이를 재귀적으로 펼쳐볼 것이다.<br><br><pre><code class="code">T(n) =< 2T(n/2) + n
+     =< 2(2T(n/4) + n/2) + n
+     =< 4T(n/4) + 2n
+     =< 4(4T(n/8) + n/4) + 2n
+     =< 8T(n/8) + 3n
+     (....)
+     
+     =< 2^rT(n/2^r) + rn
+     
+     so, let's assume n = 1.
+     nT(1) + rn
+     
+     then, T(1) means 1. (lengths of elements is one, so it doesn't use time.)
+     so, formular will be transformed to be like this:
+     
+     n + rn = n + nlogn =< O(nlogn)</code></pre><br><br>이로써 재귀적으로 전개하여 시간복잡도를 추정할 수 있다. 하지만 이 방법은 너무 복잡하기 때문에, 후에 서술할 근사 정리에 의해서
+대략적으로 근사-추정을 하는 것이 조금 더 간편하다고 할 수 있다. 이 부분은 훗날 따로 서술하기로 한다.</p>
+        </div>
+    </body>
+</html>

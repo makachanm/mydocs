@@ -18,6 +18,9 @@ amature programmer in south korea`))
 @define(l1 input addlink(input `https://github.com/makachanm/` `Github (Personal)`))
 @define(l2 input addlink(input `https://github.com/maka8x1/` `Github (Works)`))
 
+@define(articletile input add(input `Articles`))
+@define(article1 input addlink(input `./articles/article-1.html` `재귀함수의 시간복잡도 판별`))
+
 @define(doccontent chain(
 myname() addbr 
 edutitle addbr addul_h
@@ -29,7 +32,10 @@ p3 p3link addbr addbr addul_t
 linktitle addbr addul_h
 l1 addbr 
 l2 addbr 
-addmastodon addbr addul_t ))
+addmastodon addbr addul_t 
+articletile addbr addul_h
+article1 addbr 
+addul_t))
 
 @include(`libpage.cm`)
 
