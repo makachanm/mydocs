@@ -24,6 +24,7 @@ amature programmer in south korea`))
 
 @define(articletile input add(input `Articles`))
 @define(article1 input addlink(input `./articles/article-1.html` `재귀함수의 시간복잡도 판별`))
+@define(article2 input addlink(input `./articles/article-2.html` `자가 균형 이진 탐색 트리: AVL 트리와 RB 트리`))
 
 @define(doccontent chain(
 myname() addbr 
@@ -41,6 +42,7 @@ l2 addbr
 addmastodon addbr addul_t 
 articletile addbr addul_h
 article1 addbr 
+article2 addbr
 addul_t))
 
 @include(`libpage.cm`)
